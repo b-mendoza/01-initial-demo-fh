@@ -11,7 +11,7 @@ function AboutPage(): JSX.Element {
 
       <main>
         <h1>
-          Ir a <Link href="/">Home</Link>
+          Go to <Link href="/">Home</Link>
         </h1>
       </main>
     </>

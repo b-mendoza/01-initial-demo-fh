@@ -17,7 +17,7 @@ function IndexPage(): JSX.Element {
 
       <main>
         <h1>
-          Ir a <Link href="/about">About</Link>
+          Go to <Link href="/about">About</Link>
         </h1>
       </main>
     </>
