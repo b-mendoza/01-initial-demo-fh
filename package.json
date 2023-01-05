@@ -1,0 +1,14 @@
+{
+  "name": "01-initial-demo",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://github.com/b-mendoza/01-initial-demo-fh#readme",
+  "bugs": {
+    "url": "https://github.com/b-mendoza/01-initial-demo-fh/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b-mendoza/01-initial-demo-fh.git"
+  },
+  "author": "Bryan Mendoza"
+}
