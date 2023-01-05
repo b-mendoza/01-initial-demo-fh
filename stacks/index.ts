@@ -1,6 +1,6 @@
 import type { App } from '@serverless-stack/resources';
 
-import { MyStack } from './MyStack';
+import { AppStack } from './stack';
 
 function stacks(app: App): void {
   app.setDefaultFunctionProps({
@@ -10,7 +10,7 @@ function stacks(app: App): void {
     runtime: 'nodejs16.x',
   });
 
-  app.stack(MyStack);
+  app.stack(AppStack);
 }
 
 export default stacks;
