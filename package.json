@@ -10,5 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/b-mendoza/01-initial-demo-fh.git"
   },
-  "author": "Bryan Mendoza"
+  "author": "Bryan Mendoza",
+  "scripts": {
+    "build": "sst build",
+    "clean": "rimraf .next .open-next next-env.d.ts node_modules tsconfig.tsbuildinfo && npm i",
+    "console": "sst console",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "start": "sst start"
+  }
 }
