@@ -14,7 +14,7 @@ const globalStyles: Record<string, Parameters<typeof globalStyle>[1]> = {
   },
   a: {
     color: 'inherit',
-    textDecoration: 'none',
+    // textDecoration: 'none',
   },
 };
 
