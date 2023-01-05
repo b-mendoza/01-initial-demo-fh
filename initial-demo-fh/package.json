@@ -5,8 +5,8 @@
   "scripts": {
     "build": "next build",
     "check": "run-p format lint type-check",
-    "clean": "rimraf .next next-env.d.ts node_modules tsconfig.tsbuildinfo && npm i",
-    "dev": "next dev",
+    "clean": "rimraf .next .open-next next-env.d.ts node_modules tsconfig.tsbuildinfo && npm i",
+    "dev": "sst-env -- next dev",
     "format": "prettier . --cache --write",
     "lint": "next lint --fix",
     "start": "next start",
