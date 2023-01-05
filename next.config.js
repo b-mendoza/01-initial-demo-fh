@@ -1,3 +1,7 @@
+const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
+
+const withVanillaExtract = createVanillaExtractPlugin();
+
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
@@ -9,4 +13,4 @@ const nextConfig = {
   swcMinify: true,
 };
 
-module.exports = nextConfig;
+module.exports = withVanillaExtract(nextConfig);
