@@ -4,7 +4,11 @@ import Link from 'next/link';
 
 import Navbar from '@/components/Navbar';
 
-function IndexPage(props: unknown): JSX.Element {
+interface IndexPageProps {
+  fact: string;
+}
+
+function IndexPage(props: IndexPageProps): JSX.Element {
   return (
     <>
       <Head>
@@ -21,18 +25,27 @@ function IndexPage(props: unknown): JSX.Element {
           Go to <Link href="/about">About</Link>
         </h1>
 
-        <pre>{JSON.stringify(props, null, 2)}</pre>
+        <h1>
+          This is a server-side rendered page that will display a random cat
+          fatc
+        </h1>
+
+        <h2>{props.fact}</h2>
       </main>
     </>
   );
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  return await Promise.resolve({
-    props: {
-      apiUrl: process.env['API_URL'] ?? '',
-    },
-  });
+  const response = await fetch(`${process.env['API_URL'] ?? ''}/facts/random`);
+
+  if (!response.ok) throw new Error('Failed to fetch random fact');
+
+  const fact = await (response.json() as Promise<{ text: string }>);
+
+  return {
+    props: { fact: fact.text },
+  };
 };
 
 export default IndexPage;
