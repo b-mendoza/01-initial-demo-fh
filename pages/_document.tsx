@@ -1,13 +1,19 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Head, Html, Main, NextScript } from "next/document";
 
-export default function Document() {
+function NextDocument(): JSX.Element {
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      </Head>
+
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
+
+export default NextDocument;
