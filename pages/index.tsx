@@ -1,10 +1,10 @@
-import Head from "next/head";
-import Link from "next/link";
+import Head from 'next/head';
+import Link from 'next/link';
 
 const routes = [
-  { path: "/", name: "Home" },
-  { path: "/about", name: "About" },
-  { path: "/contact", name: "Contact" },
+  { path: '/', name: 'Home' },
+  { path: '/about', name: 'About' },
+  { path: '/contact', name: 'Contact' },
 ];
 
 const Nav = (): JSX.Element => (

@@ -1,7 +1,7 @@
-import "../styles/globals.css";
+import '../styles/globals.css';
 
-import type { AppProps } from "next/app";
-import Head from "next/head";
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
 function NextApp(props: AppProps<Record<string, unknown>>): JSX.Element {
   const { Component, pageProps } = props;

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface Data {
   name: string;
@@ -6,7 +6,7 @@ interface Data {
 
 export default function handler(
   _req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<Data>,
 ): void {
-  res.status(200).json({ name: "John Doe" });
+  res.status(200).json({ name: 'John Doe' });
 }
