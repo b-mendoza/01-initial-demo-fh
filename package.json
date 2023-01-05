@@ -13,7 +13,7 @@
   "author": "Bryan Mendoza",
   "scripts": {
     "build": "sst build",
-    "clean": "rimraf .next .open-next next-env.d.ts node_modules tsconfig.tsbuildinfo && npm i",
+    "clean": "rimraf .build .sst node_modules && npm i",
     "console": "sst console",
     "deploy": "sst deploy",
     "remove": "sst remove",
