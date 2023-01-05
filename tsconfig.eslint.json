@@ -3,5 +3,5 @@
   "compilerOptions": {
     "types": ["@types/node"]
   },
-  "include": [".eslintrc.js", "next.config.js"]
+  "include": [".eslintrc.js", "next.config.mjs"]
 }
