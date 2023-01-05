@@ -12,8 +12,6 @@ module.exports = {
     'standard-with-typescript',
     'plugin:jsx-a11y/strict',
     'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -23,19 +21,29 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     project: ['./tsconfig.json', './tsconfig.eslint.json'],
+    sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
   plugins: ['@typescript-eslint'],
   root: true,
-  rules: {
-    '@typescript-eslint/no-misused-promises': [
-      'error',
-      { checksVoidReturn: false },
-    ],
-  },
   settings: {
     react: {
       version: 'detect',
     },
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+      ],
+      rules: {
+        '@typescript-eslint/no-misused-promises': [
+          'error',
+          { checksVoidReturn: false },
+        ],
+      },
+    },
+  ],
 };
