@@ -1,23 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const routes = [
-  { path: '/', name: 'Home' },
-  { path: '/about', name: 'About' },
-  { path: '/contact', name: 'Contact' },
-];
-
-const Nav = (): JSX.Element => (
-  <nav>
-    <ul>
-      {routes.map((route) => (
-        <li key={route.path}>
-          <Link href={route.path}>{route.name}</Link>
-        </li>
-      ))}
-    </ul>
-  </nav>
-);
+import Navbar from '@/components/Navbar';
 
 function IndexPage(): JSX.Element {
   return (
@@ -28,7 +12,7 @@ function IndexPage(): JSX.Element {
       </Head>
 
       <header>
-        <Nav />
+        <Navbar />
       </header>
 
       <main>
