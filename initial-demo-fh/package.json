@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "check": "run-p format lint type-check",
+    "check": "concurrently \"npm:format\" \"npm:lint\" \"npm:type-check\"",
     "clean": "rimraf .next .open-next next-env.d.ts node_modules tsconfig.tsbuildinfo && npm i",
     "dev": "next dev",
     "format": "prettier . --cache --write",
