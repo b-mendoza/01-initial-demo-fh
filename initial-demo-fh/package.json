@@ -7,7 +7,7 @@
     "check": "concurrently \"npm:format\" \"npm:lint\" \"npm:type-check\"",
     "clean": "del-cli .next next-env.d.ts node_modules tsconfig.tsbuildinfo && npm i",
     "dev": "next dev",
-    "format": "prettier . --cache --write",
+    "format": "prettier . --cache --ignore-unknown --write",
     "lint": "next lint --fix",
     "start": "next start",
     "type-check": "tsc --pretty"
